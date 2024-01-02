@@ -7,3 +7,6 @@ resource "aws_instance" "example" {
     instance_type = var.instance_type_value
     subnet_id = var.subnet_id_value
 }
+output "public-ip-address" {
+  value = aws_instance.example.public_ip
+}
